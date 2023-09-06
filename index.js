@@ -39,7 +39,7 @@ async function display(BillObj) {
     const hr = document.createElement('hr');
     li.className = 'style-li';
 
-    li.textContent = dishes + " : " + price;
+    li.textContent = 'Table' + table + " : " + price + " : " + dishes;
     h2.textContent = `Table ${table}`;
 
 
