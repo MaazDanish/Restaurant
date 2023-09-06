@@ -36,9 +36,12 @@ async function display(BillObj) {
     //  creatinh child element
     const h2 = document.createElement('h2');
     const li = document.createElement('li');
+    const hr = document.createElement('hr');
+    li.className = 'style-li';
 
-    h2.textContent = `Table ${table}`;
     li.textContent = dishes + " : " + price;
+    h2.textContent = `Table ${table}`;
+
 
     const deleteButton = document.createElement('input');
     deleteButton.type = 'button';
@@ -48,7 +51,7 @@ async function display(BillObj) {
     let id = BillObj.id;
     deleteButton.onclick = async () => {
         try {
-            let res = await axios.post('http://localhost:4000/add-bill/', { id });
+            let res = await axios.post('http://localhost:4000/delete-bill/', { id });
             console.log(res);
         }
         catch (err) {
@@ -62,6 +65,7 @@ async function display(BillObj) {
     li.appendChild(deleteButton);
     parent.appendChild(h2);
     parent.appendChild(li);
+    parent.appendChild(hr);
 
 
 

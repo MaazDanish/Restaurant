@@ -1,10 +1,28 @@
-.my-form-style{
-    margin-top: 30px;
+header {
+    background-color: black;
 }
-.form-inputs{
+
+header h1 {
+    text-align: center;
+    color: white;
+}
+
+.my-form-style {
+    margin-top: 30px;
+    /* background-color: rgb(0, 0, 0); */
+}
+
+.form-inputs {
     margin: 10px 10px;
     padding: 5px;
 }
-.BillList{
+
+.BillList {
     margin-top: 20px;
+}
+
+.style-li {
+    list-style: none;
+    margin: 10px 0;
+    margin-left: 120px
 }
